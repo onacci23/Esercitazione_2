@@ -32,7 +32,7 @@
 		  </tr>
 		  <tr>
 		    <td align=right>Your Name:</td>
-		    <td valign=top><input name="name" size=25 type=text value = "<%= ((user != null && user.getFirstName() != null)?user.getFirstName()+" ":"") + ((user != null && user.getLastName() != null)?user.getLastName():"") %>"></td>
+		    <td valign=top><input name="name" size="25" type="text" value="<c:out value='${(user != null && user.getFirstName() != null) ? user.getFirstName() + " " : ""}${(user != null && user.getLastName() != null) ? user.getLastName() : ""}' />"></td>
 		  </tr>
 		  <tr>
 		    <td align=right>Your Email Address:</td>
